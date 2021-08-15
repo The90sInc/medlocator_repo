@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Become Pharmacy | {% endblock %}
+
+{% block content %}
+    <h1 class="title">Become Pharmacy</h1>
+
+    <form method="post" action=".">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="control">
+            <button class="button is-dark is-uppercase">SIGN UP</button>
+        </div>
+    </form>
+{% endblock %}
